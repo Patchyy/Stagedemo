@@ -53,21 +53,29 @@ $("#radiogroupTable").kendoRadioGroup({
 
 function changelayout() {
     console.log(this.value());
-    if (this.value() == "Free Form") {
-        $(".k-alt").css("background-color","#ffffff")
-        // $.css("border","transparent");
-        
-        
-    }else if(this.value() == "Zebra Stripes")
+    if (this.value() == "Free Form") 
     {
-        $(".k-alt").css("background-color","#F5F7FF");
-        console.log("zebra");
-    }else(this.value() == "Horizontale Lijn");
-    {
-        $(".k-alt").css("background-color","#ffffff")
-        // $(".k-grid td").css("border-bottom","solid 1px rgb(0 0 0 / 12%)");
+        $("tbody").removeClass();
+        $("tbody").attr("class", "freeform *");
+        
     }
-}
+    else if(this.value() == "Zebra Stripes")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "zebra *");
+        console.log("zebra");
+    }
+    else if(this.value() == "Horizontale Lijn")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "horizontal *");
+    }       
+    else if(this.value() == "Grid")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "grid *");
+    }
+};
 
 
 $("#radiogroupPX").kendoRadioGroup({

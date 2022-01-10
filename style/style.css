@@ -271,20 +271,26 @@ input[type="radio"].k-radio {
 }
 
 
+
 /* freeform */
-.k-alt {
-  
-}
- .k-header{
-     
+ .freeform *{
+    border-color: var(--white-color) !important; 
+    background-color: var(--white-color);
  }
 
- .k-grid {
-     /* border-bottom: 1px solid rgb(0 0 0 / 12%);  */
+ .horizontal *{
+    border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
+    border-right: none !important;
+    border-left: none !important;
+    background-color: var(--white-color) !important;
  }
 
- .freeform{
-    border-color: var(--white-color);
-    border-color: #edebeb;
-    background-color: #F5F7FF;
+ .grid * {
+    border-right: solid 1px rgb(0 0 0 / 12%) !important;
+    border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
+    background-color: var(--white-color);
+ }
+
+ .zebra *{
+    border-color: var(--white-color) !important; 
  }

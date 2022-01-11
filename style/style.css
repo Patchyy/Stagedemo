@@ -14,6 +14,8 @@ body {
     width: 65px;
 }
 
+
+
 .k-switch-on .k-switch-handle {
     background-color: var(--primary-color) !important;
     border: 1px solid black;
@@ -245,7 +247,6 @@ input[type="radio"].k-radio {
    
 }
 
-
 .k-grid-header th.k-header{
     cursor: default;
     padding: 0 0 0 6.4px;
@@ -270,8 +271,6 @@ input[type="radio"].k-radio {
     font-family: var(--regular-txt);
 }
 
-
-
 /* freeform */
  .freeform *{
     border-color: var(--white-color) !important; 
@@ -294,3 +293,11 @@ input[type="radio"].k-radio {
  .zebra *{
     border-color: var(--white-color) !important; 
  }
+ .darkmode--activated table{
+    color: #000;
+  }
+  
+  .darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+  }
+  

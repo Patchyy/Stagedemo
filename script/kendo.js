@@ -11,9 +11,6 @@ $("#window").kendoWindow({
     open: function () {
         this.center();
     },
-
-    
-
     
 });
 
@@ -34,8 +31,17 @@ var switchInstance = $("#darkmode").kendoSwitch({
     messages: {
         checked: "AAN",
         unchecked: "UIT",
-    }
+    },
+    change: darkmode,
+    
 });
+
+function darkmode(){
+    const darkmode =  new Darkmode();
+    darkmode.Toggle;
+    console.log(darkmode.isActivated())
+}
+
 
 $("#settings").kendoSwitch({
     messages: {

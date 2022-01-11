@@ -7,7 +7,7 @@ $("#window").kendoWindow({
     visible: false,
     resizable: false,
     title: "Visualisatie settings",
-    width: "65%",
+    width: "55%",
     open: function () {
         this.center();
     },
@@ -25,6 +25,9 @@ function closeWindow() {
         console.log("test");
         wdw.close();
     })
+    $('#save').click(function(){
+        wdw.close();
+    })
 }
 
 var switchInstance = $("#darkmode").kendoSwitch({
@@ -38,8 +41,8 @@ var switchInstance = $("#darkmode").kendoSwitch({
 
 function darkmode(){
     const darkmode =  new Darkmode();
-    darkmode.Toggle;
     console.log(darkmode.isActivated())
+    darkmode.Toggle;
 }
 
 

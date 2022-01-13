@@ -269,6 +269,7 @@ input[type="radio"].k-radio {
     overflow-x: hidden;
     overflow-y: auto;
     font-family: var(--regular-txt);
+    height: 100%;
 }
 
 /* freeform */

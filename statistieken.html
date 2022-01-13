@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="script/config.js" defer></script>
-    <script src="script/statistieken.js" defer></script>
-    <!-- Include the ViewSelector2 component script. -->
+    <!-- <script src="script/config.js" defer></script> -->
+    <!-- <script src="script/statistieken.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="style/variables.css">
+    <link rel="stylesheet" href="style/dashboard.css">
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,12 +14,68 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Klik hier om te verbinden met google:</p>
+    <!-- <p>Klik hier om te verbinden met google:</p>
     <section id="auth-button"></section>
     <section id="view-selector"></section>
     <section id="timeline"></section>
-    <section id="line-chart"></section>
+    <section id="line-chart"></section> -->
     <!-- <section id="active-users"></section> -->
+    <h2>Dashboard</h2>
+    <div id="list1" class="dropdown-check-list" tabindex="100">
+      <span class="anchor">Charts</span>
+      <ul class="items">
+        <li><input type="checkbox" />Chart1 </li>
+        <li><input type="checkbox" />Chart2</li>
+        <li><input type="checkbox" />Chart3 </li>
+        <li><input type="checkbox" />Chart4 </li>
+        <li><input type="checkbox" />Chart5 </li>
+        <li><input type="checkbox" />Chart6 </li>
+        <li><input type="checkbox" />Chart7</li>
+        <li><input type="checkbox" />Chart8</li>
+      </ul>
+    </div>
+    <div class="container">
     
+        <div class="chartbox" >
+          <div>
+            <canvas id="activeUsers" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="myChart" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="mostUsedTime" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="mostUsedEnti" style="width:100%;max-width:600px;height:100%;max-height:550px;"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="testchart5" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="testchart6" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="testchart7" width="550" height="250"></canvas>
+          </div>
+        </div>
+        <div class="chartbox">
+          <div>
+            <canvas id="testchart8" width="550" height="250"></canvas>
+          </div>
+        </div>
+    </div>
   </body>
 </html>

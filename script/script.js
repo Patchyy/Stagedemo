@@ -238,15 +238,13 @@ checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
     checkList.classList.add('visible');
 }
 
-$(function(){
-  $('#save_value').click(function(){
-    var val = [];
-    $(':checkbox:checked').each(function(i){
-      val[i] = $(this).val();
-      if (val[i] == "2"){
-        $('#myChart').show();
-        $('#chart2').show();
-      }
-    });
-  });
+$(".chart_visibility").change(function(){
+  console.log(this.value);
+  console.log($(".container")[0].children[this.value]);
+ 
+  if (this.checked){
+    $(".container")[0].children[this.value].style.display = "block"; 
+  }else{
+    $(".container")[0].children[this.value].style.display = "none"; 
+  }
 });

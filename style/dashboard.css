@@ -154,6 +154,7 @@ h2 {
   .btm_txt{
     font-size: 14pt;
     color: var(--white-color);
+    
   }
 
   .succes_msg:first-child{

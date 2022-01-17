@@ -237,3 +237,16 @@ checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
   else
     checkList.classList.add('visible');
 }
+
+$(function(){
+  $('#save_value').click(function(){
+    var val = [];
+    $(':checkbox:checked').each(function(i){
+      val[i] = $(this).val();
+      if (val[i] == "2"){
+        $('#myChart').show();
+        $('#chart2').show();
+      }
+    });
+  });
+});

@@ -85,3 +85,89 @@ h2 {
   .dropdown-check-list.visible .items {
     display: block;
   }
+
+
+  #ais{
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 650px;
+    padding-top: 8px;
+  }
+
+  .status_msg{
+    margin-top: 5px;
+    margin-left: 18px;
+    padding-top: 10px;
+  }
+
+  .container_ais{
+    width: 460px;
+    height: 155px;
+    background-color: #eeeeee;
+    margin-left: 18px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .error_msg{
+    width: 124px;
+    height: 124px;
+    background-color: var(--error-color);
+    display: inline-block;
+    margin: 5px 5px 5px 0px
+  }
+
+  .error_msg:first-child{
+    margin-left: 5px;
+  }
+
+  .warning_msg{
+    width: 124px;
+    height: 124px;
+    background-color: var(--warning-color);
+    display: inline-block;
+    margin: 5px 5px 5px 0px
+  }
+
+  .warning_msg:first-child{
+    margin-left: 5px;
+  }
+
+  .succes_msg{
+    width: 124px;
+    height: 124px;
+    background-color: var(--succes-color);
+    display: inline-block;
+    margin: 5px 5px 5px 0px
+  }
+
+  .succes_msg span{
+    display: inline-block;
+  }
+
+  .top_txt{
+    color: var(--white-color);
+    font-size: 14pt;
+  }
+
+  .btm_txt{
+    font-size: 14pt;
+    color: var(--white-color);
+  }
+
+  .succes_msg:first-child{
+    margin-left: 5px;
+  }
+
+  #error{
+    color: var(--error-color);
+  }
+
+  #warning{
+    color: var(--warning-color);
+  }
+
+  #succes{
+    color: var(--succes-color);
+  }

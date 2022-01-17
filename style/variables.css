@@ -52,4 +52,8 @@
 	--secundary-hover: 	var(--sec-hover);
 	--link-color: 		var(--action-color);
 	--btn-color: 		var(--action-color);
+
+	--error-color: #EE2222;
+	--warning-color: #F27E13;
+	--succes-color: #31CC2E;
 }

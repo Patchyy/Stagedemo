@@ -2,10 +2,10 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Admin', 'Stan', 'Piet', 'Klaas', 'Roos', 'Henk'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Aantal uur per account (gisteren)',
+            data: [7, 5, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132)',
                 'rgba(54, 162, 235)',
@@ -38,7 +38,7 @@ const labels = [
   const data = {
     labels: labels,
     datasets: [{
-      label: 'Aantal active gebruikers',
+      label: 'Aantal active sessies',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
       data: [20, 10, 5, 8, 20, 30, 5, 3],
@@ -96,6 +96,7 @@ new Chart("mostUsedEnti", {
   data: {
     labels: xValues,
     datasets: [{
+      label: 'Meest gebruikte entiteiten',
       backgroundColor: barColors,
       data: yValues
     }]
@@ -117,6 +118,7 @@ new Chart("testchart5", {
     data: {
       labels: landValues,
       datasets: [{
+        label: 'Meest gebruikte betaal methode',
         backgroundColor: barColors,
         data: barValues
       }]
@@ -125,7 +127,6 @@ new Chart("testchart5", {
         legend: {display: true},
         title: {
           display: true,
-          text: "World Wine Production 2018"
         }
       }
     });
@@ -138,14 +139,17 @@ new Chart("testchart6", {
   data: {
     labels: testValues,
     datasets: [{
+      label: 'Niet gelukte imports',
       data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
       borderColor: "red",
       fill: false
     },{
+      label: 'Gelukte imports',
       data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
       borderColor: "green",
       fill: false
     },{
+      label: 'Imports waarschuwingen',
       data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
       borderColor: "blue",
       fill: false
@@ -174,6 +178,7 @@ var xyValues = [
     type: "scatter",
     data: {
       datasets: [{
+        label: 'test',
         pointRadius: 4,
         pointBackgroundColor: "rgb(0,0,255)",
         data: xyValues
@@ -188,14 +193,15 @@ var xyValues = [
     }
   });
 
-  var lineValues = [50,60,70,80,90,100,110,120,130,140,150];
-var lineValues = [7,8,8,9,9,9,10,11,14,14,15];
+  var lineValues = [3,6,10,12,15,20,22,23,24,30,32,34,36];
+  var linexValues = ["Jan","Feb","Ma","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"];
 
 new Chart("testchart8", {
   type: "line",
   data: {
     labels: lineValues,
     datasets: [{
+      label: 'Aantal gebruikers accounts',
       fill: false,
       lineTension: 0,
       backgroundColor: "rgba(0,0,255,1.0)",
@@ -239,3 +245,28 @@ $(".chart_visibility").change(function(){
     $(".container")[0].children[this.value].style.display = "none"; 
   }
 });
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+function openModal() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

@@ -9,7 +9,7 @@
   <script src="script/script.js" defer></script>
   <link rel="stylesheet" href="style/variables.css">
   <link rel="stylesheet" href="style/dashboard.css">
-
+  <link href="style/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,15 +28,16 @@
     <span class="anchor">Charts</span>
     <ul class="items">
       <li><input type="checkbox" value="0" class="chart_visibility" checked />Update log </li>
-      <li><input type="checkbox" value="1" class="chart_visibility" checked />Chart1 </li>
-      <li><input type="checkbox" value="2" class="chart_visibility" checked />Chart2</li>
-      <li><input type="checkbox" value="3" class="chart_visibility" checked />Chart3 </li>
-      <li><input type="checkbox" value="4" class="chart_visibility" checked />Chart4 </li>
-      <li><input type="checkbox" value="5" class="chart_visibility" checked />Chart5 </li>
-      <li><input type="checkbox" value="6" class="chart_visibility" checked />Chart6 </li>
-      <li><input type="checkbox" value="7" class="chart_visibility" checked />Chart7</li>
-      <li><input type="checkbox" value="8" class="chart_visibility" checked />Chart8</li>
-      <li><input type="checkbox" value="9" class="chart_visibility" checked />AIS dashboard</li>
+      <li><input type="checkbox" value="1" class="chart_visibility" checked />Totaal overzicht</li>
+      <li><input type="checkbox" value="2" class="chart_visibility" checked />Active sessies </li>
+      <li><input type="checkbox" value="3" class="chart_visibility" checked />Uur per account</li>
+      <li><input type="checkbox" value="4" class="chart_visibility" checked />Gebruikte uren</li>
+      <li><input type="checkbox" value="5" class="chart_visibility" checked />AIS dashboard</li>
+      <li><input type="checkbox" value="6" class="chart_visibility" checked />Entiteiten</li>
+      <li><input type="checkbox" value="7" class="chart_visibility" checked />Betaal mehtodes</li>
+      <li><input type="checkbox" value="8" class="chart_visibility" checked />Imports </li>
+      <li><input type="checkbox" value="9" class="chart_visibility" checked />Test</li>
+      <li><input type="checkbox" value="10" class="chart_visibility" checked />Aantal accounts</li>
     </ul>
   </div>
   <div class="container">
@@ -53,6 +54,26 @@
         </div>
       </div>
     </div>
+    <div class="chartbox" id="totalscontainer">
+    </i><div class="totals">
+      <i class="fas fa-shopping-basket"></i><h2>4.542.42</h2>
+      <p>Totaal Aantal <br>
+        orders
+      </p>
+    </div>
+    <div class="totals">
+      <i class="fas fa-user"></i><h2>300</h2>
+      <p>Totaal Aantal <br>
+        Klanten
+      </p>
+    </div>
+    <div class="totals">
+      <i class="fas fa-box"></i><h2>2.500</h2>
+      <p>Totaal Aantal <br>
+        producten
+      </p>
+    </div>
+  </div>
     <div class="chartbox">
       <div>
         <canvas id="activeUsers" width="550" height="250"></canvas>
@@ -66,6 +87,45 @@
     <div class="chartbox">
       <div>
         <canvas id="mostUsedTime" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div id="ais">
+        <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i><h2 id="error" class="status_msg">Errors: 3</h2>
+        <div class="container_ais">
+          <div class="error_msg"></div>
+          <div class="error_msg"></div>
+          <div class="error_msg"></div>
+        </div>
+        <i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i> <h2 id="warning" class="status_msg">Warnings: 105</h2>
+        <div class="container_ais">
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+        </div>
+        <i class="fas fa-check-circle" style="color: var(--succes-color)"></i> <h2 id="succes" class="status_msg">Succesful: 11152</h2>
+        <div class="container_ais">
+          <div class="succes_msg" onclick="openModal()">
+            <span class="top_txt">
+              Verwerkt import <br> query
+            </span> <br>
+            <span class="btm_txt">
+              Datum: 2021-12-16
+            </span>
+          </div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+        </div>
+        <form action="https://argonaut.wiser.nl/">
+          <input type="submit" value="Fullscreen" disabled />
+        </form>
       </div>
     </div>
     <div class="chartbox">
@@ -93,41 +153,14 @@
         <canvas id="testchart8" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox">
-      <div id="ais">
-        <h2 id="error" class="status_msg">Errors: 3</h2>
-        <div class="container_ais">
-          <div class="error_msg"></div>
-          <div class="error_msg"></div>
-          <div class="error_msg"></div>
-        </div>
-        <h2 id="warning" class="status_msg">Warnings: 105</h2>
-        <div class="container_ais">
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-        </div>
-        <h2 id="succes" class="status_msg">Succesful: 11152</h2>
-        <div class="container_ais">
-          <div class="succes_msg" onclick="openModal()">
-            <span class="top_txt">
-              testtop
-            </span>
-            <span class="btm_txt">
-              testbtm
-            </span>
-          </div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
-        </div>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
       </div>
+    
     </div>
   </div>
 </body>

@@ -7,22 +7,13 @@ const myChart = new Chart(ctx, {
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132)',
+                'rgba(54, 162, 235)',
+                'rgba(255, 206, 86)',
+                'rgba(75, 192, 192)',
+                'rgba(153, 102, 255)',
+                'rgba(255, 159, 64)'
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
         }]
     },
     options: {
@@ -35,21 +26,22 @@ const myChart = new Chart(ctx, {
 });
 
 const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    'Maandag',
+    'Dinsdag',
+    'Woensdag',
+    'Donderdag',
+    'Vrijdag',
+    'Zaterdag',
+    'Zondag',
   ];
 
   const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
+      label: 'Aantal active gebruikers',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [20, 10, 5, 8, 20, 30, 5, 3],
     }]
   };
 
@@ -100,7 +92,7 @@ var barColors = [
 ];
 
 new Chart("mostUsedEnti", {
-  type: "pie",
+  type: "doughnut",
   data: {
     labels: xValues,
     datasets: [{
@@ -111,26 +103,26 @@ new Chart("mostUsedEnti", {
   options: {
     title: {
       display: true,
-      text: "World Wide Wine Production 2018"
+      text: "Meest gebruikte entiteiten"
     }
   }
 });
 
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
+var landValues = ["Ideal", "Afterpay", "Paypal", "Credit card", "Acceptgiro"];
+var barValues = [55, 49, 44, 24, 15];
 var barColors = ["red", "green","blue","orange","brown"];
 
 new Chart("testchart5", {
     type: "bar",
     data: {
-      labels: xValues,
+      labels: landValues,
       datasets: [{
         backgroundColor: barColors,
-        data: yValues
+        data: barValues
       }]
     },
     options: {
-        legend: {display: false},
+        legend: {display: true},
         title: {
           display: true,
           text: "World Wine Production 2018"
@@ -139,12 +131,12 @@ new Chart("testchart5", {
     });
 
 
-    var xValues = [100,200,300,400,500,600,700,800,900,1000];
+    var testValues = [100,200,300,400,500,600,700,800,900,1000];
 
 new Chart("testchart6", {
   type: "line",
   data: {
-    labels: xValues,
+    labels: testValues,
     datasets: [{
       data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
       borderColor: "red",
@@ -196,19 +188,19 @@ var xyValues = [
     }
   });
 
-  var xValues = [50,60,70,80,90,100,110,120,130,140,150];
-var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+  var lineValues = [50,60,70,80,90,100,110,120,130,140,150];
+var lineValues = [7,8,8,9,9,9,10,11,14,14,15];
 
 new Chart("testchart8", {
   type: "line",
   data: {
-    labels: xValues,
+    labels: lineValues,
     datasets: [{
       fill: false,
       lineTension: 0,
       backgroundColor: "rgba(0,0,255,1.0)",
       borderColor: "rgba(0,0,255,0.1)",
-      data: yValues
+      data: lineValues
     }]
   },
   options: {
@@ -239,8 +231,7 @@ checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
 }
 
 $(".chart_visibility").change(function(){
-  console.log(this.value);
-  console.log($(".container")[0].children[this.value]);
+
  
   if (this.checked){
     $(".container")[0].children[this.value].style.display = "block"; 

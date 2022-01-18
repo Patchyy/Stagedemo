@@ -27,18 +27,32 @@
   <div id="list1" class="dropdown-check-list" tabindex="100">
     <span class="anchor">Charts</span>
     <ul class="items">
-      <li><input type="checkbox" value="0" class="chart_visibility" checked />Chart1 </li>
-      <li><input type="checkbox" value="1" class="chart_visibility" checked />Chart2</li>
-      <li><input type="checkbox" value="2" class="chart_visibility" checked />Chart3 </li>
-      <li><input type="checkbox" value="3" class="chart_visibility" checked />Chart4 </li>
-      <li><input type="checkbox" value="4" class="chart_visibility" checked />Chart5 </li>
-      <li><input type="checkbox" value="5" class="chart_visibility" checked />Chart6 </li>
-      <li><input type="checkbox" value="6" class="chart_visibility" checked />Chart7</li>
-      <li><input type="checkbox" value="7" class="chart_visibility" checked />Chart8</li>
-      <li><input type="checkbox" value="8" class="chart_visibility" checked />AIS dashboard</li>
+      <li><input type="checkbox" value="0" class="chart_visibility" checked />Update log </li>
+      <li><input type="checkbox" value="1" class="chart_visibility" checked />Chart1 </li>
+      <li><input type="checkbox" value="2" class="chart_visibility" checked />Chart2</li>
+      <li><input type="checkbox" value="3" class="chart_visibility" checked />Chart3 </li>
+      <li><input type="checkbox" value="4" class="chart_visibility" checked />Chart4 </li>
+      <li><input type="checkbox" value="5" class="chart_visibility" checked />Chart5 </li>
+      <li><input type="checkbox" value="6" class="chart_visibility" checked />Chart6 </li>
+      <li><input type="checkbox" value="7" class="chart_visibility" checked />Chart7</li>
+      <li><input type="checkbox" value="8" class="chart_visibility" checked />Chart8</li>
+      <li><input type="checkbox" value="9" class="chart_visibility" checked />AIS dashboard</li>
     </ul>
   </div>
   <div class="container">
+    <div class="chartbox">
+      <div id="updateLog">
+        <div class="update-container">
+          <h2>Update log</h2>
+          <ul>
+            <li>Styling aangepast</li>
+            <li>dashboard toegevoegd</li>
+            <li>Sidemenu aanpassingen</li>
+            <li>Vernieuwingen import module</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="chartbox">
       <div>
         <canvas id="activeUsers" width="550" height="250"></canvas>
@@ -98,10 +112,10 @@
         </div>
         <h2 id="succes" class="status_msg">Succesful: 11152</h2>
         <div class="container_ais">
-          <div class="succes_msg">
+          <div class="succes_msg" onclick="openModal()">
             <span class="top_txt">
               testtop
-            </span> <br />
+            </span>
             <span class="btm_txt">
               testbtm
             </span>

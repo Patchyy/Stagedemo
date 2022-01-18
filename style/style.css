@@ -14,6 +14,8 @@ body {
     width: 65px;
 }
 
+
+
 .k-switch-on .k-switch-handle {
     background-color: var(--primary-color) !important;
     border: 1px solid black;
@@ -123,7 +125,7 @@ body {
     border-radius: 6px 6px 0 0;
     color: var(--dark-txt);
     height: 75px;
-    z-index: 1000;
+    z-index: 450;
     position: relative;
 }
 
@@ -241,10 +243,9 @@ input[type="radio"].k-radio {
     margin: 50px auto;
     overflow: hidden;
     height: 100%;
-    border: none;
+    border: solid 1px rgb(0 0 0 / 25%)
    
 }
-
 
 .k-grid-header th.k-header{
     cursor: default;
@@ -268,23 +269,34 @@ input[type="radio"].k-radio {
     overflow-x: hidden;
     overflow-y: auto;
     font-family: var(--regular-txt);
+    height: 100%;
 }
-
 
 /* freeform */
-.k-alt {
+ .freeform *{
+    border-color: var(--white-color) !important; 
+    background-color: var(--white-color);
+ }
+
+ .horizontal *{
+    border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
+    border-right: none !important;
+    border-left: none !important;
+    background-color: var(--white-color) !important;
+ }
+
+ .grid * {
+    border-right: solid 1px rgb(0 0 0 / 12%) !important;
+    border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
+    background-color: var(--white-color);
+ }
+
+ .zebra *{
+    border-color: var(--white-color) !important; 
+ }
+ 
   
-}
- .k-header{
-     
- }
-
- .k-grid {
-     /* border-bottom: 1px solid rgb(0 0 0 / 12%);  */
- }
-
- .freeform{
-    border-color: var(--white-color);
-    border-color: #edebeb;
-    background-color: #F5F7FF;
- }
+  .darkmode-layer, .darkmode-toggle {
+    z-index: 50000;
+  }
+  

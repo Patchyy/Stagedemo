@@ -100,7 +100,7 @@
 // ;
   gapi.analytics.ready(function() {
     // Authorize the user.
-    var CLIENT_ID = config.CLIENT_ID;
+    var CLIENT_ID = config.LIVE_ID;
 
     gapi.analytics.auth.authorize({
       container: 'auth-button',

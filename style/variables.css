@@ -5,6 +5,7 @@
 	--regular-txt: 		'AvantGardeGothic-Bk', sans-serif;
 	--body-txt: 		'Roboto', sans-serif;
 	
+	--dark-body-color:  #121212;
     --body-color:       #F5F7F8;
 	--dark-txt: 		#282828;
 	--scroll-color: 	#777777;
@@ -51,4 +52,8 @@
 	--secundary-hover: 	var(--sec-hover);
 	--link-color: 		var(--action-color);
 	--btn-color: 		var(--action-color);
+
+	--error-color: #EE2222;
+	--warning-color: #F27E13;
+	--succes-color: #31CC2E;
 }

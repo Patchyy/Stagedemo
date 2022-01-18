@@ -7,13 +7,10 @@ $("#window").kendoWindow({
     visible: false,
     resizable: false,
     title: "Visualisatie settings",
-    width: "65%",
+    width: "55%",
     open: function () {
         this.center();
     },
-
-    
-
     
 });
 
@@ -28,14 +25,26 @@ function closeWindow() {
         console.log("test");
         wdw.close();
     })
+    $('#save').click(function(){
+        wdw.close();
+    })
 }
 
 var switchInstance = $("#darkmode").kendoSwitch({
     messages: {
         checked: "AAN",
         unchecked: "UIT",
-    }
+    },
+    change: darkmode,
+    
 });
+
+function darkmode(){
+    const darkmode =  new Darkmode();
+    console.log(darkmode.isActivated())
+    darkmode.Toggle;
+}
+
 
 $("#settings").kendoSwitch({
     messages: {
@@ -53,21 +62,29 @@ $("#radiogroupTable").kendoRadioGroup({
 
 function changelayout() {
     console.log(this.value());
-    if (this.value() == "Free Form") {
-        $(".k-alt").css("background-color","#ffffff")
-        // $.css("border","transparent");
-        
-        
-    }else if(this.value() == "Zebra Stripes")
+    if (this.value() == "Free Form") 
     {
-        $(".k-alt").css("background-color","#F5F7FF");
-        console.log("zebra");
-    }else(this.value() == "Horizontale Lijn");
-    {
-        $(".k-alt").css("background-color","#ffffff")
-        // $(".k-grid td").css("border-bottom","solid 1px rgb(0 0 0 / 12%)");
+        $("tbody").removeClass();
+        $("tbody").attr("class", "freeform *");
+        
     }
-}
+    else if(this.value() == "Zebra Stripes")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "zebra *");
+        console.log("zebra");
+    }
+    else if(this.value() == "Horizontale Lijn")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "horizontal *");
+    }       
+    else if(this.value() == "Grid")
+    {
+        $("tbody").removeClass();
+        $("tbody").attr("class" , "grid *");
+    }
+};
 
 
 $("#radiogroupPX").kendoRadioGroup({

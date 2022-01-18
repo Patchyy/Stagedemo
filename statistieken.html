@@ -1,22 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="script/config.js" defer></script>
-    <script src="script/statistieken.js" defer></script>
-    <!-- Include the ViewSelector2 component script. -->
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>Klik hier om te verbinden met google:</p>
+<head>
+  <!-- <script src="script/config.js" defer></script> -->
+  <!-- <script src="script/statistieken.js" defer></script> -->
+  <script src="https://kendo.cdn.telerik.com/2021.3.1207/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="script/script.js" defer></script>
+  <link rel="stylesheet" href="style/variables.css">
+  <link rel="stylesheet" href="style/dashboard.css">
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <p>Klik hier om te verbinden met google:</p>
     <section id="auth-button"></section>
     <section id="view-selector"></section>
     <section id="timeline"></section>
-    <section id="line-chart"></section>
-    <!-- <section id="active-users"></section> -->
-    
-  </body>
+    <section id="line-chart"></section> -->
+  <!-- <section id="active-users"></section> -->
+  <h2>Dashboard</h2>
+  <div id="list1" class="dropdown-check-list" tabindex="100">
+    <span class="anchor">Charts</span>
+    <ul class="items">
+      <li><input type="checkbox" value="0" class="chart_visibility" checked />Update log </li>
+      <li><input type="checkbox" value="1" class="chart_visibility" checked />Chart1 </li>
+      <li><input type="checkbox" value="2" class="chart_visibility" checked />Chart2</li>
+      <li><input type="checkbox" value="3" class="chart_visibility" checked />Chart3 </li>
+      <li><input type="checkbox" value="4" class="chart_visibility" checked />Chart4 </li>
+      <li><input type="checkbox" value="5" class="chart_visibility" checked />Chart5 </li>
+      <li><input type="checkbox" value="6" class="chart_visibility" checked />Chart6 </li>
+      <li><input type="checkbox" value="7" class="chart_visibility" checked />Chart7</li>
+      <li><input type="checkbox" value="8" class="chart_visibility" checked />Chart8</li>
+      <li><input type="checkbox" value="9" class="chart_visibility" checked />AIS dashboard</li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="chartbox">
+      <div id="updateLog">
+        <div class="update-container">
+          <h2>Update log</h2>
+          <ul>
+            <li>Styling aangepast</li>
+            <li>dashboard toegevoegd</li>
+            <li>Sidemenu aanpassingen</li>
+            <li>Vernieuwingen import module</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="activeUsers" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div id="chart2" class="chartbox">
+      <div>
+        <canvas id="myChart" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="mostUsedTime" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="mostUsedEnti" style="width:100%;max-width:600px;height:100%;max-height:550px;"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="testchart5" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="testchart6" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="testchart7" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="testchart8" width="550" height="250"></canvas>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div id="ais">
+        <h2 id="error" class="status_msg">Errors: 3</h2>
+        <div class="container_ais">
+          <div class="error_msg"></div>
+          <div class="error_msg"></div>
+          <div class="error_msg"></div>
+        </div>
+        <h2 id="warning" class="status_msg">Warnings: 105</h2>
+        <div class="container_ais">
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+          <div class="warning_msg"></div>
+        </div>
+        <h2 id="succes" class="status_msg">Succesful: 11152</h2>
+        <div class="container_ais">
+          <div class="succes_msg" onclick="openModal()">
+            <span class="top_txt">
+              testtop
+            </span>
+            <span class="btm_txt">
+              testbtm
+            </span>
+          </div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+          <div class="succes_msg"><span class="top_txt"></span><br> <span class="btm_txt"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -223,7 +223,6 @@ td.k-state-focused.k-state-selected {
 
 input[type="radio"].k-radio {
     background-color: var(--white-color);
-    border: none;
 }
 
 .k-radio:checked::before {

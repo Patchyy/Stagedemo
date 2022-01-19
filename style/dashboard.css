@@ -12,7 +12,7 @@ h2 {
 }
 
 .container {
-    background-color: var(--medium-color);
+    /* background-color: var(--medium-color); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,6 +26,7 @@ h2 {
 
 
 .chartbox{
+    width: 644px;
     max-width: 50%;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -97,7 +98,6 @@ h2 {
 
   #ais{
     background-color: #FFFFFF;
-    width: 500px;
     height: 690px;
     padding-top: 8px;
     border-radius: 8px;
@@ -116,7 +116,7 @@ h2 {
   }
 
   .container_ais{
-    width: 460px;
+    width: 600px;
     height: 155px;
     background-color: #eeeeee;
     margin-left: 18px;
@@ -245,8 +245,8 @@ i+h2{
 }
 
 .totals p{
-  margin-top: -14px;
-  margin-left: 56px;
+  margin-top: -24px;
+  margin-left: 4px;
   font-size: 14pt;
   font-family: var(--medium-txt);
 }
@@ -290,4 +290,8 @@ i+h2{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.module-titel{
+  margin-left: 50px;
 }

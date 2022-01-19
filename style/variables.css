@@ -53,7 +53,7 @@
 	--link-color: 		var(--action-color);
 	--btn-color: 		var(--action-color);
 
-	--error-color: #EE2222;
-	--warning-color: #F27E13;
-	--succes-color: #31CC2E;
+	--error-color: #D0342C;
+	--warning-color: #F39200;
+	--succes-color: #3AAA35;
 }

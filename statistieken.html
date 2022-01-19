@@ -23,28 +23,28 @@
     <section id="timeline"></section>
     <section id="line-chart"></section> -->
   <!-- <section id="active-users"></section> -->
-  <h2 class="module_titel">Dashboard</h2>
+  <h1 class="module_titel">Dashboard</h1>
   <div id="list1" class="dropdown-check-list" tabindex="100">
     <span class="anchor">Charts</span>
     <ul class="items">
       <li><input type="checkbox" value="0" class="chart_visibility" checked />Update log </li>
-      <li><input type="checkbox" value="1" class="chart_visibility" checked />Totaal overzicht</li>
-      <li><input type="checkbox" value="2" class="chart_visibility" checked />Active sessies </li>
+      <li><input type="checkbox" value="1" class="chart_visibility" checked />Active sessies </li>
+      <li><input type="checkbox" value="2" class="chart_visibility" checked />Totaal overzicht</li>
       <li><input type="checkbox" value="3" class="chart_visibility" checked />Uur per account</li>
-      <li><input type="checkbox" value="4" class="chart_visibility" checked />Gebruikte uren</li>
-      <li><input type="checkbox" value="5" class="chart_visibility" checked />AIS dashboard</li>
-      <li><input type="checkbox" value="6" class="chart_visibility" checked />Entiteiten</li>
-      <li><input type="checkbox" value="7" class="chart_visibility" checked />Betaal mehtodes</li>
-      <li><input type="checkbox" value="8" class="chart_visibility" checked />Imports </li>
-      <li><input type="checkbox" value="9" class="chart_visibility" checked />Test</li>
-      <li><input type="checkbox" value="10" class="chart_visibility" checked />Aantal accounts</li>
+      <!-- <li><input type="checkbox" value="4" class="chart_visibility" checked />Gebruikte uren</li> -->
+      <li><input type="checkbox" value="4" class="chart_visibility" checked />AIS dashboard</li>
+      <li><input type="checkbox" value="5" class="chart_visibility" checked />Entiteiten</li>
+      <li><input type="checkbox" value="6" class="chart_visibility" checked />Betaal mehtodes</li>
+      <li><input type="checkbox" value="7" class="chart_visibility" checked />Imports </li>
+      <li><input type="checkbox" value="8" class="chart_visibility" checked />Gebruikte uren</li>
+      <li><input type="checkbox" value="9" class="chart_visibility" checked />Aantal accounts</li>
     </ul>
   </div>
   <div class="container">
     <div class="chartbox">
       <div id="updateLog">
         <div class="update-container">
-          <h2>Update log</h2>
+          <i class="fas fa-clipboard-list"></i><h3>Update log</h3>
           <ul>
             <li>Styling aangepast <a href="#">lees meer</a></li>
             <li>dashboard toegevoegd <a href="#">lees meer</a></li>
@@ -52,6 +52,11 @@
             <li>Vernieuwingen import module <a href="#">lees meer</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="chartbox">
+      <div>
+        <canvas id="activeUsers" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox" id="totalscontainer">
@@ -74,37 +79,28 @@
       </p>
     </div>
   </div>
-    <div class="chartbox">
-      <div>
-        <canvas id="activeUsers" width="550" height="250"></canvas>
-      </div>
-    </div>
     <div id="chart2" class="chartbox">
       <div>
         <canvas id="myChart" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
-      <div>
-        <canvas id="mostUsedTime" width="550" height="250"></canvas>
-      </div>
-    </div>
-    <div class="chartbox">
       <div id="ais">
+        <h4>AIS dashboard</h4>
         <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i><h2 id="error" class="status_msg">Errors: 3</h2>
         <div class="container_ais">
-          <div class="error_msg"></div>
-          <div class="error_msg"></div>
-          <div class="error_msg"></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
         </div>
         <i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i> <h2 id="warning" class="status_msg">Warnings: 105</h2>
         <div class="container_ais">
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
-          <div class="warning_msg"></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
         </div>
         <i class="fas fa-check-circle" style="color: var(--succes-color)"></i> <h2 id="succes" class="status_msg">Succesful: 11152</h2>
         <div class="container_ais">
@@ -145,7 +141,7 @@
     </div>
     <div class="chartbox">
       <div>
-        <canvas id="testchart7" width="550" height="250"></canvas>
+        <canvas id="mostUsedTime" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
@@ -158,7 +154,7 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <p>Hier komt extra info betreft het AIS bericht</p>
       </div>
     
     </div>

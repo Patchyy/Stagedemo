@@ -17,6 +17,16 @@ const myChart = new Chart(ctx, {
         }]
     },
     options: {
+      plugins: {
+        title: {
+            display: true,
+            text: 'Uren actief per account',
+        },
+        legend:{
+          display: false,
+          text: landValues,
+        }
+    },
         scales: {
             y: {
                 beginAtZero: true
@@ -41,14 +51,25 @@ const labels = [
       label: 'Aantal active sessies',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [20, 10, 5, 8, 20, 30, 5, 3],
+      data: [20, 10, 5, 8, 20, 2, 5],
     }]
   };
 
   const configActiveUsers = {
     type: 'line',
     data: data,
-    options: {}
+    options: {
+      plugins: {
+        title: {
+            display: true,
+            text: 'Active sessie (realtime)',
+        },
+        legend:{
+          display: false,
+          text: landValues,
+        }
+    }
+    }
   };
 
   const activeUsers = new Chart(
@@ -78,10 +99,11 @@ const labels = [
         'rgb(0, 62, 109)',
       ],
       hoverOffset: 4
-    }]
+    }],
+    options: {}
   };
 
-var xValues = ["entiteit1", "entiteit2", "entiteit3", "entiteit4", "entiteit5"];
+var xValues = ["Categorie", "Product", "Product variant", "Fabrikant", "Recept"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = [
   "#b91d47",
@@ -102,16 +124,18 @@ new Chart("mostUsedEnti", {
     }]
   },
   options: {
-    title: {
-      display: true,
-      text: "Meest gebruikte entiteiten"
-    }
+    plugins: {
+      title: {
+          display: true,
+          text: 'Meest gebruikte entiteiten',
+      }
+  }
   }
 });
 
 var landValues = ["Ideal", "Afterpay", "Paypal", "Credit card", "Acceptgiro"];
 var barValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
+var barColors = ["#E7849D", "#A1C73A","#85C9F0","#F39200","#FBB900"];
 
 new Chart("testchart5", {
     type: "bar",
@@ -124,39 +148,55 @@ new Chart("testchart5", {
       }]
     },
     options: {
-        legend: {display: true},
+      plugins: {
         title: {
-          display: true,
-        }
+            display: true,
+            text: 'Meest gebruikte betaal methode',
+           
+        },
+         legend:{
+              display: false,
+              text: landValues,
+            }
+        
+    }
       }
     });
 
-
-    var testValues = [100,200,300,400,500,600,700,800,900,1000];
-
+    var testValues = ['Ma','Di','Wo','Do','Vr','Za','Zo'];
+    var multicolors = ['#D0342C','#3AAA35','#EA5B0C'];
 new Chart("testchart6", {
   type: "line",
   data: {
     labels: testValues,
     datasets: [{
       label: 'Niet gelukte imports',
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
+      data: [860,1140,1060,1060,1070,1110,1330],
+      borderColor: "#D0342C",
       fill: false
     },{
       label: 'Gelukte imports',
-      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-      borderColor: "green",
+      data: [1600,1700,1700,1900,2000,2700,4000],
+      borderColor: "#3AAA35",
       fill: false
     },{
       label: 'Imports waarschuwingen',
-      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-      borderColor: "blue",
+      data: [300,700,1500,1000,1300,2200,2000],
+      borderColor: "#EA5B0C",
       fill: false
     }]
   },
   options: {
-    legend: {display: false}
+    plugins: {
+      title: {
+          display: true,
+          text: 'Imports',
+          
+      },
+      legend:{
+        display: true,
+      }
+  }
   }
 });
 
@@ -180,12 +220,21 @@ var xyValues = [
       datasets: [{
         label: 'test',
         pointRadius: 4,
-        pointBackgroundColor: "rgb(0,0,255)",
+        pointBackgroundColor: "#0791D3",
         data: xyValues
       }]
     },
     options: {
-      legend: {display: false},
+      plugins: {
+        title: {
+            display: true,
+            text: 'Test data',
+        },
+        legend:{
+          display: false,
+          text: landValues,
+        }
+    },
       scales: {
         xAxes: [{ticks: {min: 40, max:160}}],
         yAxes: [{ticks: {min: 6, max:16}}],
@@ -204,13 +253,22 @@ new Chart("testchart8", {
       label: 'Aantal gebruikers accounts',
       fill: false,
       lineTension: 0,
-      backgroundColor: "rgba(0,0,255,1.0)",
-      borderColor: "rgba(0,0,255,0.1)",
+      backgroundColor: "#0791D3",
+      borderColor: "#0791D3",
       data: lineValues
     }]
   },
   options: {
-    legend: {display: false},
+    plugins: {
+      title: {
+          display: true,
+          text: 'Gebruikers account wiser',
+      },
+      legend:{
+        display: false,
+        text: landValues,
+      }
+  },
     scales: {
       yAxes: [{ticks: {min: 6, max:16}}],
     }
@@ -220,6 +278,17 @@ new Chart("testchart8", {
   const config2 = {
     type: 'bar',
     data: data2,
+    options: {
+      plugins: {
+        title: {
+            display: true,
+            text: 'Meest gebruikte uren',
+        },
+        legend:{
+          display: false,
+        }
+      }
+    }
   };
 
   const mostUsedTime = new Chart(

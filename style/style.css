@@ -238,25 +238,24 @@ input[type="radio"].k-radio {
     box-shadow: none;
 }
 
-.k-grid{
+.k-grid {
     margin: 50px auto;
     overflow: hidden;
     height: 100%;
     border: solid 1px rgb(0 0 0 / 25%)
-   
 }
 
-.k-grid-header th.k-header{
+.k-grid-header th.k-header {
     cursor: default;
     padding: 0 0 0 6.4px;
     vertical-align: middle;
     overflow: hidden;
     height: 48px;
-    
-    
+
+
 }
 
-.k-grid-header a{
+.k-grid-header a {
     font-family: var(--bold-txt);
 }
 
@@ -264,7 +263,7 @@ input[type="radio"].k-radio {
     height: 48px;
 }
 
-.k-grid-content{
+.k-grid-content {
     overflow-x: hidden;
     overflow-y: auto;
     font-family: var(--regular-txt);
@@ -272,30 +271,30 @@ input[type="radio"].k-radio {
 }
 
 /* freeform */
- .freeform *{
-    border-color: var(--white-color) !important; 
+.freeform * {
+    border-color: var(--white-color) !important;
     background-color: var(--white-color);
- }
+}
 
- .horizontal *{
+.horizontal * {
     border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
     border-right: none !important;
     border-left: none !important;
     background-color: var(--white-color) !important;
- }
+}
 
- .grid * {
+.grid * {
     border-right: solid 1px rgb(0 0 0 / 12%) !important;
     border-bottom: solid 1px rgb(0 0 0 / 12%) !important;
     background-color: var(--white-color);
- }
+}
 
- .zebra *{
-    border-color: var(--white-color) !important; 
- }
- 
-  
-  .darkmode-layer, .darkmode-toggle {
+.zebra * {
+    border-color: var(--white-color) !important;
+}
+
+
+.darkmode-layer,
+.darkmode-toggle {
     z-index: 50000;
-  }
-  
+}

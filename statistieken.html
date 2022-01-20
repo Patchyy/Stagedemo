@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- <script src="script/config.js" defer></script> -->
-  <!-- <script src="script/statistieken.js" defer></script> -->
   <script src="https://kendo.cdn.telerik.com/2021.3.1207/js/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
   <script src="script/script.js" defer></script>
@@ -15,14 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
 </head>
-
 <body>
-  <!-- <p>Klik hier om te verbinden met google:</p>
-    <section id="auth-button"></section>
-    <section id="view-selector"></section>
-    <section id="timeline"></section>
-    <section id="line-chart"></section> -->
-  <!-- <section id="active-users"></section> -->
   <h1 class="module_titel">Dashboard</h1>
   <div id="list1" class="dropdown-check-list" tabindex="100">
     <span class="anchor">Charts</span>
@@ -44,7 +34,8 @@
     <div class="chartbox">
       <div id="updateLog">
         <div class="update-container">
-          <i class="fas fa-clipboard-list"></i><h3>Update log</h3>
+          <i class="fas fa-clipboard-list"></i>
+          <h4>Update log</h4>
           <ul>
             <li>Styling aangepast <a href="#">lees meer</a></li>
             <li>dashboard toegevoegd <a href="#">lees meer</a></li>
@@ -60,25 +51,29 @@
       </div>
     </div>
     <div class="chartbox" id="totalscontainer">
-    </i><div class="totals">
-      <i class="fas fa-shopping-basket"></i><h2>4.542.42</h2>
-      <p>Totaal Aantal <br>
-        orders
-      </p>
+      <h4>Totaal overzicht wiser</h4>
+      <div class="totals">
+        <i class="fas fa-shopping-basket"></i>
+        <h2>4.542.42</h2>
+        <p>Totaal aantal<br>
+           orders
+        </p>
+      </div>
+      <div class="totals">
+        <i class="fas fa-user"></i>
+        <h2>300</h2>
+        <p>Totaal aantal<br>
+           klanten
+        </p>
+      </div>
+      <div class="totals">
+        <i class="fas fa-box"></i>
+        <h2>2.500</h2>
+        <p>Totaal aantal<br>
+           producten
+        </p>
+      </div>
     </div>
-    <div class="totals">
-      <i class="fas fa-user"></i><h2>300</h2>
-      <p>Totaal Aantal <br>
-        Klanten
-      </p>
-    </div>
-    <div class="totals">
-      <i class="fas fa-box"></i><h2>2.500</h2>
-      <p>Totaal Aantal <br>
-        producten
-      </p>
-    </div>
-  </div>
     <div id="chart2" class="chartbox">
       <div>
         <canvas id="myChart" width="550" height="250"></canvas>
@@ -87,37 +82,55 @@
     <div class="chartbox">
       <div id="ais">
         <h4>AIS dashboard</h4>
-        <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i><h2 id="error" class="status_msg">Errors: 3</h2>
+        <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i>
+        <h2 id="error" class="status_msg">Errors: 3</h2>
         <div class="container_ais">
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
         </div>
-        <i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i> <h2 id="warning" class="status_msg">Warnings: 105</h2>
+        <i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i>
+        <h2 id="warning" class="status_msg">Warnings: 105</h2>
         <div class="container_ais">
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="warning_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
         </div>
-        <i class="fas fa-check-circle" style="color: var(--succes-color)"></i> <h2 id="succes" class="status_msg">Succesful: 11152</h2>
+        <i class="fas fa-check-circle" style="color: var(--succes-color)"></i>
+        <h2 id="succes" class="status_msg">Succesful: 11152</h2>
         <div class="container_ais">
           <div class="succes_msg" onclick="openModal()">
             <span class="top_txt">
               Verwerkt import <br> query
             </span> <br>
             <span class="btm_txt">
-              Datum: 2021-12-16
+              2021-12-16
             </span>
           </div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
-          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span class="btm_txt">Datum: 2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
+          <div class="succes_msg"><span class="top_txt">Verwerkt import <br> query</span><br> <span
+              class="btm_txt">2021-12-16</span></div>
         </div>
         <form action="https://argonaut.wiser.nl/">
           <input type="submit" value="Fullscreen" disabled />
@@ -150,15 +163,14 @@
       </div>
     </div>
     <div id="myModal" class="modal">
-
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>Hier komt extra info betreft het AIS bericht</p>
+        <p>Zoals bijvoorbeeld de uitgevoerde query of de error die de query geeft</p>
       </div>
-    
+
     </div>
   </div>
 </body>
-
 </html>

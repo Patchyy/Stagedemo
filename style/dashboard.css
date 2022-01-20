@@ -239,11 +239,11 @@ h2 {
   width: 500px;
 }
 
-ul {
+#updateLog ul {
   list-style: none; /* Remove default bullets */
 }
 
-ul li::before {
+#updateLog ul li::before {
   content: "\2022";
   color: #2ECC71;
   font-weight: bold;

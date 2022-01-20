@@ -37,7 +37,7 @@ h2 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#mostUsedEnti{
+#mostUsedEnti {
   margin: auto;
 }
 
@@ -107,16 +107,17 @@ h2 {
 
 }
 
-#ais h4{
+#ais h4 {
   font-family: var(--demi-txt);
   text-align: left;
+  margin-left: 8px;
 }
 
-#ais .fas{
+#ais .fas {
   margin-left: 20px;
 }
 
-#ais input{
+#ais input {
   margin-top: 5px;
 }
 
@@ -137,7 +138,13 @@ h2 {
   margin-left: 18px;
   overflow-x: scroll;
   overflow-y: hidden;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
   white-space: nowrap;
+}
+
+.container_ais::-webkit-scrollbar {
+  width: 0 !important
 }
 
 .error_msg {
@@ -145,13 +152,13 @@ h2 {
   height: 124px;
   background-color: var(--error-color);
   display: inline-block;
-  margin: 10px 5px 5px 0px;
+  margin: 14px 5px 5px 0px;
   position: relative;
   cursor: pointer;
 }
 
 .error_msg:first-child {
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .warning_msg {
@@ -159,13 +166,13 @@ h2 {
   height: 124px;
   background-color: var(--warning-color);
   display: inline-block;
-  margin: 10px 5px 5px 0px;
+  margin: 14px 5px 5px 0px;
   position: relative;
   cursor: pointer;
 }
 
 .warning_msg:first-child {
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .succes_msg {
@@ -173,43 +180,44 @@ h2 {
   height: 124px;
   background-color: var(--succes-color);
   display: inline-block;
-  margin: 10px 5px 5px 0px;
+  margin: 14px 5px 5px 0px;
   position: relative;
   cursor: pointer;
 }
 
+.succes_msg:first-child {
+  margin-left: 8px;
+}
+
 .error_msg span {
   position: absolute;
-  font-family: var(--bold-txt);
+  font-family: var(--body-txt);
 }
 
 .warning_msg span {
   position: absolute;
-  font-family: var(--bold-txt);
+  font-family: var(--body-txt);
 }
 
 .succes_msg span {
   position: absolute;
-  font-family: var(--bold-txt);
+  font-family: var(--body-txt);
 }
 
 .top_txt {
   color: var(--white-color);
   font-size: 10pt;
-  top: 2px;
-  left: 5px;
+  top: 8px;
+  left: 8px;
 }
 
 .btm_txt {
   font-size: 10pt;
   color: var(--white-color);
-  bottom: 2px;
-  left: 5px;
+  bottom: 8px;
+  left: 8px;
 }
 
-.succes_msg:first-child {
-  margin-left: 5px;
-}
 
 #error {
   color: var(--error-color);
@@ -231,7 +239,7 @@ h2 {
   width: 500px;
 }
 
-.update-container h3 {
+.update-container h4 {
   font-family: var(--bold-txt);
   margin: 5px;
   display: inline-block;
@@ -288,6 +296,12 @@ i+h2 {
   vertical-align: middle;
 }
 
+#totalscontainer h4 {
+  font-family: var(--demi-txt);
+  text-align: left;
+  margin-left: 8px;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
@@ -317,6 +331,7 @@ i+h2 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-family: var(--body-txt);
   /* Could be more or less, depending on screen size */
 }
 

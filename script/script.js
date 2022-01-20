@@ -62,7 +62,7 @@ const labels = [
       plugins: {
         title: {
             display: true,
-            text: 'Active sessie (realtime)',
+            text: 'Active sessie (Per dag)',
         },
         legend:{
           display: false,

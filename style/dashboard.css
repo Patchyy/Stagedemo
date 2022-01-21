@@ -47,6 +47,8 @@ h2 {
   top: 5px;
   right: 15px;
   background-color: var(--white-color);
+  font-family: var(--body-txt);
+  margin-top: 50px;
 }
 
 .dropdown-check-list .anchor {
@@ -368,4 +370,23 @@ i+h2 {
 .module_titel {
   margin-left: 7%;
   font-family: var(--bold-txt)
+}
+
+.link_dashboard {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: 200ms all ease-in-out;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font: 18px/32px "AvantGardeGothic-Bd", sans-serif;
+  padding: 5px 15px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.link_dashboard:hover {
+  color: var(--action-hover);
 }

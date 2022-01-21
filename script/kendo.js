@@ -90,7 +90,7 @@ function changelayout() {
 $("#radiogroupPX").kendoRadioGroup({
     items: [{value:"40px", label: "40 pixels"}, {value:"48px", label:"48 pixels"}, {value:"56px",label:"56 pixels"}],
     layout: "vertical",
-    value: "48 pixels",
+    value: "48px",
     change: changeheight,
 });
 

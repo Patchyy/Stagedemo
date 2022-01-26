@@ -305,15 +305,21 @@ checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
     checkList.classList.add('visible');
 }
 
-$(".chart_visibility").change(function(){
 
- 
+$(".chart_visibility").change(function(){
   if (this.checked){
     $(".container")[0].children[this.value].style.display = "block"; 
   }else{
     $(".container")[0].children[this.value].style.display = "none"; 
   }
+
 });
+
+$('.close').click(function(){
+  var index = $(this).parent().index();
+  $(".chart_visibility")[index].click()
+});
+
 
 var modal = document.getElementById("myModal");
 

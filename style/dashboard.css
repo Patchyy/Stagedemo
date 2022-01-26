@@ -243,6 +243,14 @@ h2 {
 
 #updateLog ul {
   list-style: none; /* Remove default bullets */
+  overflow: auto;
+  height: 165px;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+#updateLog ul::-webkit-scrollbar {
+  width: 0 !important
 }
 
 #updateLog ul li::before {

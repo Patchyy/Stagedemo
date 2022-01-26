@@ -34,24 +34,30 @@
   <div class="container">
     <div class="chartbox">
       <div id="updateLog">
+        <span class="close">&times;</span>
         <div class="update-container">
           <i class="fas fa-clipboard-list"></i>
           <h4>Update log</h4>
           <ul>
-            <li>Styling aangepast <a href="#">lees meer</a></li>
+            <li>Styling aangepast <a href="#" onclick="openModal()">lees meer</a></li>
             <li>dashboard toegevoegd <a href="#">lees meer</a></li>
             <li>Sidemenu aanpassingen <a href="#">lees meer</a></li>
             <li>Vernieuwingen import module <a href="#">lees meer</a></li>
+            <li>AIS toegevoegd <a href="#">lees meer</a></li>
+            <li>Close button sluit nu ook <a href="#">lees meer</a></li>
+            <li>Drag en dropable <a href="#">lees meer</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="activeUsers" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox" id="totalscontainer">
+      <span class="close">&times;</span>
       <h4>Totaal overzicht wiser</h4>
       <div class="totals">
         <i class="fas fa-shopping-basket"></i>
@@ -76,11 +82,13 @@
       </div>
     </div>
     <div id="chart2" class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="myChart" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div id="ais">
         <h4>AIS dashboard</h4>
         <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i>
@@ -112,7 +120,7 @@
         <i class="fas fa-check-circle" style="color: var(--succes-color)"></i>
         <h2 id="succes" class="status_msg">Succesful: 7</h2>
         <div class="container_ais">
-          <div class="succes_msg" onclick="openModal()">
+          <div class="succes_msg">
             <span class="top_txt">
               Verwerkt import <br> query
             </span> <br>
@@ -139,26 +147,31 @@
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="mostUsedEnti" style="width:100%;max-width:600px;height:100%;max-height:550px;"></canvas>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="testchart5" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="testchart6" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="mostUsedTime" width="550" height="250"></canvas>
       </div>
     </div>
     <div class="chartbox">
+      <span class="close">&times;</span>
       <div>
         <canvas id="testchart8" width="550" height="250"></canvas>
       </div>

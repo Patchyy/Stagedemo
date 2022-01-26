@@ -246,7 +246,7 @@ h2 {
   list-style: none; /* Remove default bullets */
   overflow: auto;
   height: 165px;
-  margin-left: 32px;
+  margin-left: 16px;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
 }
@@ -361,7 +361,7 @@ i+h2 {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: 3% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -434,5 +434,5 @@ i+h2 {
 
 .modal-content iframe{
   margin-top: 40px;
-  margin-left: 95px;
+  margin-left: 100px;
 }

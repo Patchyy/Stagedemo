@@ -137,7 +137,7 @@ h2 {
 .container_ais {
   width: 600px;
   height: 155px;
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
   margin-left: 18px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -350,7 +350,7 @@ i+h2 {
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
+  overflow: hidden;
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
   /* Fallback color */
@@ -361,7 +361,7 @@ i+h2 {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -423,4 +423,16 @@ i+h2 {
 
 .link_dashboard:hover {
   color: var(--action-hover);
+}
+
+.modal-content p{
+  margin-left: 100px;
+  width: 85%;
+  font-family: var(--regular-txt);
+  font-size: 14pt;
+}
+
+.modal-content iframe{
+  margin-top: 40px;
+  margin-left: 95px;
 }

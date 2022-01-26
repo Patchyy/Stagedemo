@@ -327,7 +327,7 @@ var modal = document.getElementById("myModal");
 // var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("closed")[0];
 
 // When the user clicks on the button, open the modal
 function openModal() {
@@ -345,3 +345,59 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//drag element
+var containerHeight = document.getElementById('grid-container').offsetHeight;
+        var dragElement = document.querySelectorAll(".chartbox");
+    
+        for (let x=0; x < dragElement.length; x++){
+            moveElement(dragElement[x]);
+        }
+
+        function moveElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+               
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                console.log(pos3,pos4);
+                document.onmouseup = closeDragElement;
+
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;                
+
+                // set the element's new position:   
+                var elmntHeight = elmnt.offsetHeight;    
+                var elmntTop = (elmnt.offsetTop - pos2);
+
+                console.log(pos1,pos2,pos3,pos4,elmnt.offsetHeight,elmnt.offsetTop);
+
+                elmnt.style.bottom = ((containerHeight - elmntTop) - elmntHeight) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                //elmnt.style.bottom = (containerHeight-pos4+elmntHeight) + "px";
+            }
+
+            function closeDragElement() {
+                /* show new values:*/                
+                //alert('Element ID: #' + elmnt.id + '\n' + 'Left: ' + elmnt.style.left + '\n' + 'Bottom: ' + elmnt.style.bottom);
+
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }

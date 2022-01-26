@@ -13,8 +13,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 class="module_titel">Dashboard</h1>  <a href="Settings.html" class="link_dashboard">Ga naar Settings</a>
-
+  
   <div id="list1" class="dropdown-check-list" tabindex="100">
     <span class="anchor">Statistieken</span>
     <ul class="items">
@@ -31,8 +30,11 @@
       <li><input type="checkbox" value="9" class="chart_visibility" checked />Aantal accounts</li>
     </ul>
   </div>
-  <div class="container">
-    <div class="chartbox">
+  <h1 class="module_titel">Dashboard</h1>  
+  <a href="Settings.html" class="link_dashboard">Ga naar Settings</a>
+  <div class="container" id="grid-container" >
+
+    <div class="chartbox" style="left: 50px; bottom: 2615px; z-index: 1; margin: 0px;">
       <div id="updateLog">
         <span class="close">&times;</span>
         <div class="update-container">
@@ -50,15 +52,16 @@
         </div>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 50px; bottom: 655px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="activeUsers" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox" id="totalscontainer">
+    <div class="chartbox" id="totalscontainer" style="left: 900px; bottom: 2655px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <h4>Totaal overzicht wiser</h4>
+      <div class="totals-container">
       <div class="totals">
         <i class="fas fa-shopping-basket"></i>
         <h2>4.542.42</h2>
@@ -81,24 +84,25 @@
         </p>
       </div>
     </div>
-    <div id="chart2" class="chartbox">
+    </div>
+    <div id="chart2" class="chartbox" style="left: 900px; bottom: 458px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="myChart" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 900px; bottom: 1790px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div id="ais">
         <h4>AIS dashboard</h4>
         <i class="fas fa-exclamation-circle" style="color: var(--error-color);"></i>
         <h2 id="error" class="status_msg">Error: 3</h2>
         <div class="container_ais">
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> nieuwe annulering</span><br> <span
               class="btm_txt">2021-12-16</span></div>
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> nieuwe annulering</span><br> <span
               class="btm_txt">2021-12-16</span></div>
-          <div class="error_msg"><span class="top_txt">Aanmaken <br> niewe annulering</span><br> <span
+          <div class="error_msg"><span class="top_txt">Aanmaken <br> nieuwe annulering</span><br> <span
               class="btm_txt">2021-12-16</span></div>
         </div>
         <i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i>
@@ -146,31 +150,31 @@
         </form>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 50px; bottom: 1950px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="mostUsedEnti" style="width:100%;max-width:600px;height:100%;max-height:550px;"></canvas>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 50px; bottom: 1100px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="testchart5" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 50px; bottom: 1530px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="testchart6" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 900px; bottom: 1380px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="mostUsedTime" width="550" height="250"></canvas>
       </div>
     </div>
-    <div class="chartbox">
+    <div class="chartbox" style="left: 900px; bottom: 915px; z-index: 1; margin: 0px;">
       <span class="close">&times;</span>
       <div>
         <canvas id="testchart8" width="550" height="250"></canvas>
@@ -179,7 +183,7 @@
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="closed">&times;</span>
         <p>Hier komt extra info betreft het AIS bericht</p>
         <p>Zoals bijvoorbeeld de uitgevoerde query of de error die de query geeft</p>
       </div>

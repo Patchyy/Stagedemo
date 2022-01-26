@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FIXER Picture alignment</title>
+        <link rel="stylesheet" href="assets/uikit.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <style>
+            *,*::after,*::before {
+                box-sizing: border-box
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                list-style: none;
+                outline: 0;
+                resize: none;
+                position: relative;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased
+            }
+
+            html {
+                height: 100%;
+                min-height: 100%;
+                width: 100%
+            }
+            body {
+                color: #707070;
+                min-height: 100%;
+                overflow-x: hidden;
+                width: 100%;
+                background: #eee;
+                align-items: stretch;
+                justify-content: center;
+            }
+
+
+            /* Onderstaande CSS is nodig */
+            .grid-container {
+                background: #ffffff;
+                width: 1000px;
+                height: 1000px;
+                display: block;
+                position: relative;
+            }
+
+            figure {
+                display: block;
+               
+                position: absolute;    
+                transform-origin: center center;
+                cursor: grab;
+            }
+        </style>
+        
+    </head>
+    <body>
+       
+
+            <!-- grid container -->
+            <div id="grid-container"class="grid-container">
+
+                <!-- 
+                    Positioning gebeurt vanuit left bottom van het element (figure) in plaats van center. 
+                    Dan komt de positioning toch logischer overeen met wat je doet. Zo kan je alle elementen die tegen de linker kant aan moeten komen Left 0 mee geven.
+                    En kan je elementen dus beter uitlijnen met elkaar.
+                
+                    Opties:
+                    left: percentueel aangeven hoe ver van de linkerkant het element moet komen staan.
+                    bottom: percentueel aangeven hoe ver van de onderkant het element moet komen staan.
+                    z-index: layer niveau.
+                    transform: eventueel handig om een rotate(#deg) mee te geven om zo een element om te draaien.
+                    
+                -->
+
+
+
+                <figure id="c1" class="draggable" style="left: 500px; bottom: 500px; z-index: 1; margin:0px;">
+<svg width="50" height="50">
+  <rect width="50" height="50" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+</svg>
+</figure>
+          
+            </div>
+            <!-- end grid container -->
+
+
+    </body>
+    <script type="application/javascript">
+
+	
+
+        var containerHeight = document.getElementById('grid-container').offsetHeight;
+        var dragElement = document.querySelectorAll(".draggable");
+    
+        for (let x=0; x < dragElement.length; x++){
+            moveElement(dragElement[x]);
+        }
+
+        function moveElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+               
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                console.log(pos3,pos4);
+                document.onmouseup = closeDragElement;
+
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;                
+
+                // set the element's new position:   
+                var elmntHeight = elmnt.offsetHeight;    
+                var elmntTop = (elmnt.offsetTop - pos2);
+
+                console.log(pos1,pos2,pos3,pos4,elmnt.offsetHeight,elmnt.offsetTop);
+
+                elmnt.style.bottom = ((containerHeight - elmntTop) - elmntHeight) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                //elmnt.style.bottom = (containerHeight-pos4+elmntHeight) + "px";
+            }
+
+            function closeDragElement() {
+                /* show new values:*/                
+                //alert('Element ID: #' + elmnt.id + '\n' + 'Left: ' + elmnt.style.left + '\n' + 'Bottom: ' + elmnt.style.bottom);
+
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</html>
